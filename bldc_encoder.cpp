@@ -5,20 +5,20 @@ BLDCEncoder::BLDCEncoder(
     GPIO_TypeDef * hv_port, uint16_t hv_pin,
     GPIO_TypeDef * hw_port, uint16_t hw_pin
 )
-    :   hu_port(hu_port),
-        hv_port(hv_port),
-        hw_port(hw_port),
-        hu_pin(hu_pin),
-        hv_pin(hv_pin),
-        hw_pin(hw_pin)
+    :   hu_port_(hu_port),
+        hv_port_(hv_port),
+        hw_port_(hw_port),
+        hu_pin_(hu_pin),
+        hv_pin_(hv_pin),
+        hw_pin_(hw_pin)
 {}
 
 uint8_t BLDCEncoder::get_state() const noexcept {
     uint8_t state{};
 
-    state |= HAL_GPIO_ReadPin(hu_port, hu_pin) << 2;
-    state |= HAL_GPIO_ReadPin(hv_port, hv_pin) << 1;
-    state |= HAL_GPIO_ReadPin(hw_port, hw_pin);
+    state |= HAL_GPIO_ReadPin(hu_port_, hu_pin_) << 2;
+    state |= HAL_GPIO_ReadPin(hv_port_, hv_pin_) << 1;
+    state |= HAL_GPIO_ReadPin(hw_port_, hw_pin_);
 
     return state;
 }

@@ -2,7 +2,7 @@
 #define BLDC_ENCODER_HPP
 
 #include <cstdint>
-#include "stm32fxxx_hal.h"
+#include "stm32f7xx_hal.h"
 
 class BLDCEncoder {
 public:
@@ -48,13 +48,13 @@ public:
     static constexpr float    INVALID_RAD = -1.0f;
 
 private:
-    GPIO_TypeDef * const hu_port;
-    GPIO_TypeDef * const hv_port;
-    GPIO_TypeDef * const hw_port;
+    GPIO_TypeDef * const hu_port_;
+    GPIO_TypeDef * const hv_port_;
+    GPIO_TypeDef * const hw_port_;
 
-    const uint16_t hu_pin;
-    const uint16_t hv_pin;
-    const uint16_t hw_pin;
+    const uint16_t hu_pin_;
+    const uint16_t hv_pin_;
+    const uint16_t hw_pin_;
 };
 
 #endif // BLDC_ENCODER_HPP
