@@ -1,0 +1,9 @@
+../Core/Src/main.cpp:85:5:BLDCDriver::BLDCDriver(TIM_HandleTypeDef*, uint32_t, Pins, Pins, Pins)	1
+../Core/Src/main.cpp:88:10:void BLDCDriver::init()	1
+../Core/Src/main.cpp:94:10:void BLDCDriver::setSpeed(uint16_t)	6
+../Core/Src/main.cpp:98:10:void BLDCDriver::start()	1
+../Core/Src/main.cpp:103:10:void BLDCDriver::stop()	1
+../Core/Src/main.cpp:108:10:void BLDCDriver::setDirection(bool)	2
+../Core/Src/main.cpp:124:5:int main()	2
+../Core/Src/main.cpp:221:17:void HAL_GPIO_EXTI_Callback(uint16_t)	1
+../Core/Src/main.cpp:231:17:void Error_Handler()	1
